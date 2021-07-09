@@ -22,10 +22,10 @@ class App extends Component {
     const photosJson = await photos.json();
 
     const postsAndPhotos = postsJson.map((post, index) => {
-      return { ...post, cover: photosJson[index.url] }
+      return { ...post, cover: photosJson[index].url }
     });
   
-    this.setState({posts: postsJson, photos: photosJson });
+    this.setState({posts: postsAndPhotos });
   }
 
   // function life-cycle onde se coloca buscas em API
@@ -49,8 +49,11 @@ class App extends Component {
       <section className="container">
         <div className="posts">
           {posts.map(post => (
-            <div className="post">
-              <div key={post.id} className="post-content">
+            <div key={post.id} className="post">
+              <div className="post-image">
+                <img src={post.cover} alt={post.title}></img>
+              </div>
+              <div className="post-content">
                 <h1>{post.title}</h1>
                 <p>{post.body}</p>
               </div>

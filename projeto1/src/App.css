@@ -9,12 +9,32 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 30px;
+  
 }
 
 .post {
   background-color: #fff;  
   box-shadow: 0 0 10px rgba(0,0,0,.2);
+  transition: transform 100ms ease-in-out;
 }
+
+.post:hover {
+  transform: scale(1.03);
+}
+
+.post-image {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.post img {
+  max-width: 100%;
+  max-height: 100%;
+  
+}
+
+
 
 .post-content {
   padding: 30px;
