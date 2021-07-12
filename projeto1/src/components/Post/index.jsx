@@ -5,6 +5,7 @@ export const Post = ({posts}) => (
         {posts.map(({ id, title, body, cover }) => (
         <PostCard
             key={id}
+            id={id}
             title={title}
             body={body}
             cover={cover}
