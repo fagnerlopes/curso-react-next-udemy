@@ -4,10 +4,7 @@ import './style.css';
 export class Button extends Component {    
 
     render() {
-        const {text, onClick, disabled, displayButton} = this.props;
-        const styleButton = {
-            display: "none"
-        };
+        const {text, onClick, disabled} = this.props;
         return (
             <div className="button-container">
                 <button 

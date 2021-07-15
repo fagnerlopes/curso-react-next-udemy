@@ -64,7 +64,6 @@ class Home extends Component {
     const filteredPosts = !!searchValue ? allPosts.filter(post => {
       return post.title.toLowerCase().includes(searchValue);
     }) : posts;
-    let displayButton = true;
 
     return (
       <section className="container">
@@ -86,7 +85,6 @@ class Home extends Component {
             text="Load more posts"
             onClick={this.loadMorePosts}
             disabled={noMorePosts}
-            displayButton={displayButton}
           />
         )}
         
